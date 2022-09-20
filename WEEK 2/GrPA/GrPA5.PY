@@ -1,8 +1,15 @@
-from curses.ascii import isalpha
-
-
 string = input()
 if 7< len(string) < 33:
-    if isalpha(string[0]):
-       if  ('s' and 'y') in string:
-             print('hello')
+    if string[0].isalpha():
+       if ('/'not in string  and '='not in string and '"'not in string and '\"'not in string and "'" not in string and ' ' not in string)  :
+          print(True)    
+       else:
+         print(False)
+    else:
+      print(False)
+else:
+   print(False)
+    
+
+
+             
