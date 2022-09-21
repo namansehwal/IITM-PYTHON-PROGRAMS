@@ -1,7 +1,3 @@
-x = 20
-list = [ *range(20)]
-# for x in range(x):
-#    list.append(x)
-
-print(list)
+for x in range(1,13):
+    print('Q'+str(x))
  
