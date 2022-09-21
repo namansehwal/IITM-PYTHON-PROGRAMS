@@ -1,1 +1,1 @@
-print(True if input()[:2] == "DS" else False)
+print(int(((int(input())-int(input()))**2)**0.5))

@@ -1,1 +1,2 @@
-print(True if input()[:2] == "DS" else False)
+print(True if input()[:4] == "TN07" else False)
+
