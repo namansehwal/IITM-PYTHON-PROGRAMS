@@ -1,0 +1,6 @@
+a = input()
+print(a[0:2])
+print(a[3:5])
+print(a[6:8])
+print(a[9:13])
+print(a[-10:-6])
