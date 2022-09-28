@@ -4,5 +4,6 @@ if len(string)%2 == 0:
         string = string[0:-1]
     else:
         string = string+'.'
-            
-print(string)
+     
+x =len(string)//2             
+print(string[x-1:x+2])
