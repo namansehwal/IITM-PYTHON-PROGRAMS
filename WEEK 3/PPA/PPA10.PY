@@ -5,5 +5,6 @@ for i in range(2, n+1):
     if i == 2 or i%2 != 0:
         if n % i == 0:
             sum = sum + i
-            n = n / i
+            # n = n / i
 print(sum)
+
