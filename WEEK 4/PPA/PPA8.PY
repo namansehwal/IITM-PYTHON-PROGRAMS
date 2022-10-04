@@ -1,13 +1,13 @@
-#Accept a string as input and print PALINDROME,
-# if it is a palindrome,
-# and NOT PALINDROME otherwise.
-string = input()
-flag = True
-for x in range(len(string)//2):
-    if string[x] != string[-x-1]:
-        print("NOT PALINDROME")
-        flag = False
-        break
-if flag:
-    print("PALINDROME")    
+n = int(input())
+final = []
+for i in range(n):
+    temp = []
+    for j in range(n):
+        if i == j:
+            temp.append(1)
+        else:
+            temp.append(0)
+    final.append(temp)        
+for i in final:
+    print(*i,sep=',')    
     
