@@ -1,14 +1,26 @@
-L = input().split(' ')
-	# there is a single space between the quotes
-# print(L)
-for i in range(len(L) - 1):
-    if len(L[i]) > len(L[i + 1]):
-        L[i], L[i + 1] = L[i + 1], L[i]
+# get the maximum
+def get_max(L):
+    maxi = L[0]
+    for x in L:
+        if x > maxi:
+            maxi = x
+    return maxi
+# get the minimum
+def get_min(L):
+    mini = L[0]
+    for x in L:
+        if x < mini:
+            mini = x
+    return mini
+def get_range(L):
+    """
+    compute the range of a list L
 
-count = 0
-print(L)
-for i in range(len(L)):
-    if len(L[i]) <= len(L[-1]):
-        count += 1
-
-print(count)
+    Argument:
+        L: list
+    Return:
+        range: float
+    """
+    maxi = get_max(L)
+    mini = get_min(L)
+    return maxi - mini
