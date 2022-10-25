@@ -1,8 +1,15 @@
-def maxval(a, b, c):
-    if a > b and a > c:
-        return a
-    elif b > a and b > c:
-        return b
-    else:
-        return c
-print(maxval(int(input()), int(input()), int(input())))        
+
+alphanums = {
+    '1': 'one',
+    '2': 'two',
+    '3': 'three',
+    '4': 'four',
+    '5': 'five',
+    '6': 'six',
+    '7': 'seven',
+    '8': 'eight',
+    '9': 'nine',
+    '0': 'zero'    
+}
+for each in input():
+    print(alphanums[each])
