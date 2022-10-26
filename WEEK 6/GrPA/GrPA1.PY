@@ -1,14 +1,22 @@
-L = input().split(' ')
-	# there is a single space between the quotes
-# print(L)
-for i in range(len(L) - 1):
-    if len(L[i]) > len(L[i + 1]):
-        L[i], L[i + 1] = L[i + 1], L[i]
+def get_toppers(scores_dataset, subject, gender):
+    """
+    Get the toppers in subject belonging to gender
 
-count = 0
-print(L)
-for i in range(len(L)):
-    if len(L[i]) <= len(L[-1]):
-        count += 1
-
-print(count)
+    Arguments:
+        scores_dataset: list of dicts
+        subject: string
+        gender: string ('F' or 'M')
+    Return:
+        list of strings
+    """
+    output = []
+    max_marks = float('-inf')
+    for score in scores_dataset:
+        if score['Gender'] == gender:
+            if max_marks == score[subject]:
+                output.append(score['Name'])
+            elif max_marks < score[subject]:
+                output = [score['Name']]
+                max_marks = score[subject]
+    
+    return output

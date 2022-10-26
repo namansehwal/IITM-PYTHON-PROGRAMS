@@ -7,16 +7,22 @@ def two_level_sort(scores):
     Return:
         result: list of tuples (string, integer)
     """
-    result = []
-    for i, e in enumerate(scores):
-        if i == 0:
-            result.append(e)
+    dict_ = {}
+    score_list = []
+    for i in scores:
+        if(i[1] in dict_):
+            dict_[i[1]].append(i[0])
         else:
-            for j, f in enumerate(result):
-                if e[1] > f[1]:
-                    result.insert(j, e)
-                    break
-                elif j == len(result) - 1:
-                    result.append(e)
-    
-print(two_level_sort([('a', 1), ('b', 1), ('c', 2), ('d', 2), ('e', 3), ('f', 3)]))
+            dict_[i[1]] = [i[0]]
+            score_list.append(i[1])
+    score_list.sort()
+    d_level1_sort = {}
+    for i in score_list:
+        d_level1_sort[i] = dict_[i]
+        d_level1_sort[i].sort()
+    final=[]
+    for i in score_list:
+        for j in d_level1_sort[i]:
+            x=(j,i)
+            final.append(x)
+    return final
