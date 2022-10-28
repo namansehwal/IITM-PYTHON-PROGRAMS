@@ -1,16 +1,14 @@
 def minor_matrix(M, i, j):
-  M.pop(i)
-  for x in M:
-    x.pop(j)
-  return M,i,j  
-
-
-
-d = int(input())
-x = []
-for _ in range(d):
-    x.append(input().split(','))
-y,z = int(input()),int(input())    
-minor_matrix(x,y,z)
-
-print(x)
+    l=[]
+    for a in range(len(M)):
+        t=[]
+        if a==i:
+            continue
+        else:
+            for b in range(len(M[0])):
+                if b==j:
+                    continue
+                else:
+                    t.append(M[a][b])
+        l.append(t)
+    return l
