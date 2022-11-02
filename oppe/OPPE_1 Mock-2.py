@@ -1,16 +1,26 @@
-# input = list(map(int,input().split(',')))
+input = list(map(int,input().split(',')))
 
-# len = len(input)//2
+len = len(input)//2
 
-# left = sum(input[0:len])
-# right = sum(input[-len])
+left = sum(input[0:len])
+right = sum(input[-len])
 
-# if left == right:
-#     print('balanced')
-# elif left>right:
-#     print('left-heavy')
-# else:
-#     print('right-heavy')
+if left == right:
+    print('balanced')
+elif left>right:
+    print('left-heavy')
+else:
+    print('right-heavy')
+
+
+
+
+
+
+
+
+
+
 
 sample_input = input().split(',')
 for x in range(len(sample_input)):
