@@ -1,8 +1,14 @@
-
-#avoiding squares
-
-for _ in range(int(input())):
-    n=int(input())
-    for i in range(1,n+1):
-        print(i,end=(" "))
-    print("\n")
+def exactly_two(players):
+    
+    All_players = []
+    for player in players:
+        # print(player)
+        count = 0
+        for i in players[player]:
+            
+            if players[player][i]==True:
+                count+=1
+        if count==2:
+            All_players.append(player)
+    return(set(All_players))
+    

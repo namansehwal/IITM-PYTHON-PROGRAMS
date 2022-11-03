@@ -1,13 +1,6 @@
-list(map(int,input().split(',')))
-coins = list(map(int,input().split(',')))
-#123456
-mapping = { 
-            1:0,
-            2:0,
-            3:0,
-            4:0,
-            5:0
-          }
-size = len(coins)//5
-for i in range(size):
-    
+coins =input()
+L = len(coins)
+box = [0,0,0,0,0]
+for i in range (0,L):
+    box[i%5] += int(coins[i])
+print(box.index(max(box))+1)
