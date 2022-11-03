@@ -1,9 +1,9 @@
-input = list(map(int,input().split(',')))
+sample = list(map(int,input().split(',')))
 
-len = len(input)//2
+len = len(sample)//2
 
-left = sum(input[0:len])
-right = sum(input[-len])
+left = sum(sample[0:len])
+right = sum(sample[-len:])
 
 if left == right:
     print('balanced')

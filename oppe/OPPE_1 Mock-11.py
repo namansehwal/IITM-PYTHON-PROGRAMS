@@ -8,7 +8,7 @@ def is_reachable(grid):
     ant_pos = index_pos(grid,"B")
     food_pos = index_pos(grid,"G")
 
-    if ant_pos[0] >= food_pos[0] and ant_pos[1]<=food_pos[1]:
+    if ant_pos[0] >= food_pos[0] and ant_pos[1] <= food_pos[1]:
 
         step = ant_pos[0]-food_pos[0] + food_pos[1]-ant_pos[1]
         return(True,step) 
